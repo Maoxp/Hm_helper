@@ -1,5 +1,5 @@
 {
-		"name": "Hm_helper/src", 
+		"name": "hm_helper/src", 
 		"description": "公用方法",  
 		"type": "library",			
 		"keywords": ["helper", "function"],
@@ -15,7 +15,7 @@
 		},
 		"autoload": { 
 			"psr-4": {
-				"HmHelper\\": "Hm_helper/src"
+				"HmHelper\\": "hm_helper/src"
 			}
 		}
 }
