@@ -14,7 +14,7 @@ class Common {
      * @author mxp
      *  2018-7-18
      */
-    public function sendMsg($mobile, $tplId, $params = null) {
+    public function sendMsg($key, $mobile, $tplId, $params = null) {
         header('content-type:text/html;charset=utf-8');
         $sendUrl = 'http://v.juhe.cn/sms/send'; //短信接口的URL
 
@@ -26,13 +26,11 @@ class Common {
         }
 
         $smsConf = array(
-            'key' => '0a77607bf84e4310ac546e9476a92691', //您申请的APPKEY
+            'key' => $key, //您申请的APPKEY
             'mobile' => $mobile,  //接受短信的用户手机号码
             'tpl_id' => $tplId,   //您申请的短信模板ID，根据实际情况修改
             'tpl_value' => $paramStr //您设置的模板变量，根据实际情况修改
         );
-        //$smsConf['tpl_id'] = '16232';
-        //$smsConf['mobile'] = '13196761198';
         $content = self::curl_method($sendUrl, $smsConf, 'post'); //请求发送短信
         // $resMsg = '';
         $isSuccess = false;
