@@ -1,0 +1,21 @@
+{
+		"name": "Hm_helper/src", 
+		"description": "公用方法",  
+		"type": "library",			
+		"keywords": ["helper", "function"],
+		"license": "MIT",   
+		"authors": [
+			{
+				"name": "mxp",
+				"email": "maoxingpei8686@163.com"
+			}
+		],
+		"require": {
+			"php": ">=5.6"
+		},
+		"autoload": { 
+			"psr-4": {
+				"HmHelper\\": "Hm_helper/src"
+			}
+		}
+}
